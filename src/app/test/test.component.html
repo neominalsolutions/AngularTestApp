@@ -1,0 +1,22 @@
+
+<!-- two way data binding -->
+v1 : <input type="checkbox" [(ngModel)]="visible">
+
+<!-- [(ngModel)] model and event binding => two way model binding -->
+<!-- [attribute] yani reactdaki props anlamı gelir -->
+<!-- (ngModelChange) react event, action props, angular events -->
+v2 : <input type="checkbox" [ngModel]="visible" (ngModelChange)="visible=!visible" />
+
+<!-- directive yapıları template üzerinden state değişimleri yapmamızı sağlayan özel yapılar. -->
+
+<!-- ngIf ekrana bir elementin basılıp basılmayacağını kararını veren directive -->
+
+<p *ngIf="visible">
+    Visible True Seçildi
+</p>
+
+<p *ngIf="!visible">
+    Visible False
+</p>
+
+<button [disabled]="!visible">Button</button>
