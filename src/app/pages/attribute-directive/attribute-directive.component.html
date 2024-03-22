@@ -1,0 +1,24 @@
+
+
+<!-- attribute Directives -->
+
+<div [ngClass]="active ? 'active':'passive'">
+NgClass
+</div>
+
+<!-- react daki style benzer -->
+<div [ngStyle]="active == true ? {'background-color':'red',
+'font-size':'12px'}:{'background-color':'black', 'font-size':'10px'}">
+
+NgStyle
+</div>
+
+<input type="text" [(ngModel)]="text" />
+<div>
+    Karakter Sayısı : {{text.length}}
+    <span [hidden]="text.length < 10"> 10 karakter geçtiniz</span>
+</div>
+
+<button (click)="active = !active">Active/Passive</button>
+
+

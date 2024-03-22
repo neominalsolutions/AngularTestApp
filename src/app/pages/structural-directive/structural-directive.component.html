@@ -1,0 +1,58 @@
+
+<!-- temaplate den bir servise erişim sağlamak için public tanımlıyoruzs -->
+{{meta.removeTag('adsa')}}
+
+<div
+    class="table-responsive-xl"
+>
+    <table
+        class="table"
+    >
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">SurName</th>
+                <th scope="col">Title</th>
+                <th scope="col">Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="" *ngFor="let person of persons">
+                <td>{{person.name}}</td>
+                <td>{{person.surname}}</td>
+                <td>
+                    <span *ngIf="person.title">
+                    {{person.title}}
+                    </span>
+                    <span *ngIf="person.title == null">
+                        Ünvan bilgisi girilmemiştir
+                    </span>
+                </td>
+
+               
+                <td class="">
+                    <div [ngSwitch]="person.deparment">
+                        <div *ngSwitchCase="'IK'">
+                            <i class="fa fa-home"></i>
+                        </div>
+                        <div *ngSwitchCase="'IT'">
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div *ngSwitchDefault>
+                            <i class="fa fa-comment"></i>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<p textDecoration>
+    Deneme
+</p>
+
+<div textDecoration>
+    Div Sample
+</div>
