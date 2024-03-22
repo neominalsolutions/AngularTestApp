@@ -1,9 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { TodoService } from '../../services/TodoService';
-import { Todo } from '../../models/Todo';
-import { Subscription } from 'rxjs';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Todo } from '../../models/Todo';
+import { TodoService } from '../../services/TodoService';
 
 // page compnent route dan çağırılacağından selector gerek yok
 // HttpClientModule module ile http client işlemleri yapmamızı sağlar

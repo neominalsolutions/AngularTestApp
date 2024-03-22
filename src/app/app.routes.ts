@@ -6,6 +6,7 @@ import { StructuralDirectiveComponent } from './pages/structural-directive/struc
 import { PipesSampleComponent } from './pages/pipes-sample/pipes-sample.component';
 import { TodoPageComponent } from './pages/service-sample/TodoPage';
 import { TodoAsyncPipePage } from './pages/service-sample-async/TodoAsyncPipePage';
+import { ReactiveFormComponentComponent } from './pages/reactive-forms/ReactiveFormComponent.component';
 
 export const routes: Routes = [
   {
@@ -31,6 +32,10 @@ export const routes: Routes = [
   {
     path: 'service-sample-asyncpipe',
     component: TodoAsyncPipePage,
+  },
+  {
+    path: 'reactive-forms',
+    component: ReactiveFormComponentComponent,
   },
 ];
 

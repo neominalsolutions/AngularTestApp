@@ -1,0 +1,40 @@
+<p>
+  ReactiveFormComponent works!
+</p>
+
+<input placeholder="name"  [formControl]="name" />
+
+{{name.value}}
+
+<span *ngIf="name.hasError('required')">
+  Name alanı boş geçilemez
+</span>
+
+<!-- form group'u bağlama işlemi -->
+<form [formGroup]="profileForm" (submit)="SubmitForm()">
+
+  <input type="text" formControlName="firstName" />
+  <span *ngIf="profileForm.get('firstName')?.hasError('minlength')">
+    Min 5 karakter
+  </span>
+  <br>
+  <input type="text" formControlName="lastName" />
+
+  <div formGroupName="address">
+  <h2>Address</h2>
+
+  <label for="street">Street: </label>
+  <input id="street" type="text" formControlName="street">
+
+  <br>
+
+  <label for="city">City: </label>
+  <input id="city" type="text" formControlName="city">
+
+</div>
+<br>
+  <button type="submit" [disabled]="!profileForm.valid">Gönder</button>
+
+  <button type="button" (click)="profileForm.reset()">Reset</button>
+
+</form>
