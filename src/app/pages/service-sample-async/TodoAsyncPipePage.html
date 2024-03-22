@@ -1,0 +1,24 @@
+
+
+<div
+    class="table-responsive-lg"
+>
+    <table
+        class="table table-warning"
+    >
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Complete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="" *ngFor="let todo of $todos | async; trackBy: trackByFunc">             
+                <td>{{todo.title}}</td>
+                <td [ngStyle]="todo.completed ? {'color':'green'}:{'color':'red'}">
+                {{todo.completed ? 'Yapıldı':'Yapılmadı'}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
