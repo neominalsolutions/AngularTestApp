@@ -1,0 +1,30 @@
+<p>pipes-sample works!</p>
+
+<!-- | -->
+
+<!-- Currency,Number,Percent Numeric Value Pipes -->
+<!-- String Pipes uppercase,lowercase,titlecase -->
+<!-- Date Pipes -->
+<!-- Json Pipe -->
+<!-- TL için TRY koyalım. -->
+
+{{order | json}}
+<br>
+OrderDate : {{order.orderDate | date:'shortDate'}} {{order.orderDate | date: 'shortTime'}}
+<br>
+List Price : {{order.listPrice | currency:'TRY'}}
+<br>
+Freight: {{order.freight | number:'2.0-1'}}
+<br>
+CustomerName: {{order.customerName | uppercase}}
+<br>
+Address: {{order.address | lowercase}}
+<br>
+Address: {{order.address | titlecase}}
+<br>
+DiscountRate: {{order.discountRate | percent}}
+<br>
+Order Status: {{order.status | orderStatus:'100':'200' }}
+
+
+
